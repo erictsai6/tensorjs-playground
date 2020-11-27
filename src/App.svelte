@@ -1,4 +1,6 @@
 <script>
+  import Camera from './Camera.svelte';
+
   import {onMount} from 'svelte';
   let count = 0;
   onMount(() => {
@@ -27,9 +29,9 @@
   }
 
   .App-header {
+    padding: 25px 10px;
     background-color: #f9f6f6;
     color: #333;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +42,7 @@
     color: #ff3e00;
   }
   .App-logo {
-    height: 36vmin;
+    height: 12vmin;
     pointer-events: none;
     margin-bottom: 3rem;
     animation: App-logo-spin infinite 1.6s ease-in-out alternate;
@@ -59,11 +61,9 @@
   <header class="App-header">
     <img src="/logo.svg" class="App-logo" alt="logo" />
     <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-    <p>Page has been open for <code>{count}</code> seconds.</p>
-    <p>
-      <a class="App-link" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
-        Learn Svelte
-      </a>
-    </p>
+    <p>Page has been open for <code>{count}</code> seconds.</p>        
   </header>
+  <div>
+    <Camera/>
+  </div>
 </div>
